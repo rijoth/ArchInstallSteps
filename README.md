@@ -88,6 +88,7 @@ nano /etc/hosts
 
 ## install the network manager:
 pacman -S networkmanager
+
 systemctl enable NetworkManager
 ## for wifi
 pacman -S iwd
