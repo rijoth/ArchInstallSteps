@@ -102,8 +102,11 @@ pacman -S grub efibootmgr
 
 ## Install the bootlader on your system and generate its configuration files
 mkdir /boot/efi
+
 mount /dev/sda2 /boot/efi
-lsblk # to check if everything is mounted correctly
+
+lsblk -- to check if everything is mounted correctly
+
 grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi --removable
 grub-mkconfig -o /boot/grub/grub.cfg
 
