@@ -157,4 +157,5 @@ MODULES=(i915 ...)
 
 ## AMD
 sudo pacman -S amd-ucode 
+
 sudo pacman -S --needed lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader
