@@ -145,6 +145,7 @@ startx
 
 # POST INSTALLATION
 
+## Intel
 ### intel ucode
 pacman -S intel-ucode
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -153,3 +154,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S xf86-video-intel vulkan-intel vulkan-icd-loader libva-intel-driver
 ##### Add your (kernel) graphics driver to your initramfs. For example, if using intel add i915:
 MODULES=(i915 ...)
+
+## AMD
+sudo pacman -S amd-ucode 
+sudo pacman -S --needed lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader
