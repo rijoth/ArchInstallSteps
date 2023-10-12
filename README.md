@@ -4,24 +4,42 @@
 ping -c 3 archlinux.org
 
 ### for using wifi during installation
+
 $ iwctl
+
 #First, if you do not know your wireless device name, list all Wi-Fi devices:
+
 [iwd]# device list
+
 eg output: wlan0
+
 #Then, to scan for networks:
+
 [iwd]# station device scan
+
 #You can then list all available networks:
+
 [iwd]# station device get-networks
+
 eg: station wlan0 get-networks
+
 #Finally, to connect to a network:
+
 [iwd]# station device connect SSID
+
 eg: station wlan0 connect <network_name>
 
 ## If a passphrase is required, you will be prompted to enter it. Alternatively, you can supply it as a command line argument:
+
 $ iwctl --passphrase passphrase station device connect SSID
+
 #To disconnect from a network:
+
 [iwd]# station device disconnect
+
 ###########################
+
+## list the disks
 fdisk -l
 ## run this command to create a new partition table:
 cfdisk /dev/sda
