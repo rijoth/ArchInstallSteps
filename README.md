@@ -131,7 +131,12 @@ exit
 ## login using username and password
 
 ## Install X window system and audio
+
+(old)
 pacman -S pulseaudio pulseaudio-alsa xorg xorg-xinit xorg-server
+
+(new)
+sudo pacman -S alsa-firmware alsa-utils pipewire pipewire-alsa pipewire-pulse pavucontrol xorg xorg-xinit xorg-server
 
 ## Install desktop environment, Iam installing XFCE desktop
 pacman -S xfce4 lightdm lightdm-gtk-greeter
